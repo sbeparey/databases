@@ -1,6 +1,6 @@
 ﻿CREATE VIEW sales_by_category AS
 SELECT categories.category_id, categories.category_name, products.product_name, 
-	Sum (order_details_extended.extended_price) AS product_sales
+	SUM (order_details_extended.extended_price) AS product_sales
 FROM categories INNER JOIN 
 		(products INNER JOIN 
 			(orders INNER JOIN order_details_extended ON orders.order_id = order_details_extended.order_id) 

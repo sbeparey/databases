@@ -1,6 +1,6 @@
 ﻿DROP TABLE IF EXISTS categories;
 CREATE TABLE categories (
-    category_id         INT             IDENTITY(1, 1) NOT NULL,
+    category_id         SMALLINT             IDENTITY(1, 1) NOT NULL,
     category_name       NVARCHAR(15)    NOT NULL,
     description         NTEXT           NULL,
     picture             IMAGE           NULL,

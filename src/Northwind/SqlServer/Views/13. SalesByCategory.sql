@@ -1,6 +1,6 @@
 ﻿CREATE VIEW SalesByCategory AS
 SELECT Categories.CategoryId, Categories.CategoryName, Products.ProductName, 
-	Sum (OrderDetailsExtended.ExtendedPrice) AS ProductSales
+	SUM (OrderDetailsExtended.ExtendedPrice) AS ProductSales
 FROM Categories INNER JOIN 
 		(Products INNER JOIN 
 			(Orders INNER JOIN OrderDetailsExtended ON Orders.OrderId = OrderDetailsExtended.OrderId) 
