@@ -1,6 +1,6 @@
 ﻿CREATE VIEW Invoices AS
 SELECT Orders.ShipName, Orders.ShipAddress, Orders.ShipCity, Orders.ShipRegion, Orders.ShipPostalCode, 
-	Orders.ShipCountry, Orders.CustomerId, Customers.CompanyName AS CustomerName, Customers.Address, Customers.City, 
+	Orders.ShipCountry, Orders.CustomerId, Customers.CompanyName AS CustomerName, Customers."Address", Customers.City, 
 	Customers.Region, Customers.PostalCode, Customers.Country, (FirstName + ' ' + LastName) AS Salesperson, 
 	Orders.OrderId, Orders.OrderDate, Orders.RequiredDate, Orders.ShippedDate, Shippers.CompanyName AS ShipperName, 
 	"Order Details".ProductId, Products.ProductName, "Order Details".UnitPrice, "Order Details".Quantity, 
