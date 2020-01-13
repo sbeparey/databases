@@ -11,14 +11,8 @@ CREATE TABLE "Order Details" (
     CONSTRAINT CK_UnitPrice CHECK (UnitPrice >= 0)
 );
 
-CREATE NONCLUSTERED INDEX OrderId
+CREATE NONCLUSTERED INDEX IX_OrderDetails_OrderId
     ON "Order Details" (OrderId ASC);
 
-CREATE NONCLUSTERED INDEX OrdersOrder_Details
-    ON "Order Details" (OrderId ASC);
-
-CREATE NONCLUSTERED INDEX ProductId
-    ON "Order Details" (ProductId ASC);
-
-CREATE NONCLUSTERED INDEX ProductsOrder_Details
+CREATE NONCLUSTERED INDEX IX_OrderDetails_ProductId
     ON "Order Details" (ProductId ASC);

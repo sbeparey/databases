@@ -22,8 +22,8 @@ CREATE TABLE Employees (
     CONSTRAINT CK_Birthdate CHECK (BirthDate < GETDATE()),
 );
 
-CREATE NONCLUSTERED INDEX LastName
+CREATE NONCLUSTERED INDEX IX_Employees_LastName
     ON Employees (LastName ASC);
 
-CREATE NONCLUSTERED INDEX PostalCode
+CREATE NONCLUSTERED INDEX IX_Employees_PostalCode
     ON Employees (PostalCode ASC);

@@ -17,17 +17,11 @@ CREATE TABLE Products (
     CONSTRAINT CK_UnitsOnOrder CHECK (UnitsOnOrder >= 0)
 );
 
-CREATE NONCLUSTERED INDEX CategoriesProducts
+CREATE NONCLUSTERED INDEX IX_Products_CategoriesProducts
     ON Products (CategoryId ASC);
 
-CREATE NONCLUSTERED INDEX CategoryId
-    ON Products (CategoryId ASC);
-
-CREATE NONCLUSTERED INDEX ProductName
+CREATE NONCLUSTERED INDEX IX_Products_ProductName
     ON Products (ProductName ASC);
 
-CREATE NONCLUSTERED INDEX SupplierId
-    ON Products (SupplierId ASC);
-
-CREATE NONCLUSTERED INDEX SuppliersProducts
+CREATE NONCLUSTERED INDEX IX_Products_SupplierId
     ON Products (SupplierId ASC);

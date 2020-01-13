@@ -4,4 +4,3 @@ CREATE TABLE CustomerDemographics (
     CustomerDescription     NTEXT       NULL,
     CONSTRAINT PK_CustomerDemographics PRIMARY KEY NONCLUSTERED (CustomerTypeId ASC)
 );
-

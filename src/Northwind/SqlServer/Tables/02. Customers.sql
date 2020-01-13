@@ -14,14 +14,14 @@ CREATE TABLE Customers (
     CONSTRAINT PK_Customers PRIMARY KEY CLUSTERED (CustomerId ASC)
 );
 
-CREATE NONCLUSTERED INDEX City
+CREATE NONCLUSTERED INDEX IX_Customers_City
     ON Customers (City ASC);
 
-CREATE NONCLUSTERED INDEX CompanyName
+CREATE NONCLUSTERED INDEX IX_Customers_CompanyName
     ON Customers (CompanyName ASC);
 
-CREATE NONCLUSTERED INDEX PostalCode
+CREATE NONCLUSTERED INDEX IX_Customers_PostalCode
     ON Customers (PostalCode ASC);
 
-CREATE NONCLUSTERED INDEX Region
+CREATE NONCLUSTERED INDEX IX_Customers_Region
     ON Customers (Region ASC);

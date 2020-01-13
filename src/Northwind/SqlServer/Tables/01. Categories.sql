@@ -7,5 +7,5 @@ CREATE TABLE Categories (
     CONSTRAINT PK_Categories PRIMARY KEY CLUSTERED (CategoryId ASC)
 );
 
-CREATE NONCLUSTERED INDEX CategoryName
+CREATE NONCLUSTERED INDEX IX_Categories_CategoryName
     ON Categories (CategoryName ASC);

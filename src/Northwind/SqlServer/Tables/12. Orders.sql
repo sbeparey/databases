@@ -17,26 +17,20 @@ CREATE TABLE Orders (
     CONSTRAINT PK_Orders PRIMARY KEY CLUSTERED (OrderId ASC)
 );
 
-CREATE NONCLUSTERED INDEX CustomerId
+CREATE NONCLUSTERED INDEX IX_Orders_CustomerId
     ON Orders (CustomerId ASC);
 
-CREATE NONCLUSTERED INDEX CustomersOrders
-    ON Orders (CustomerId ASC);
-
-CREATE NONCLUSTERED INDEX EmployeeId
+CREATE NONCLUSTERED INDEX IX_Orders_EmployeeId
     ON Orders (EmployeeId ASC);
 
-CREATE NONCLUSTERED INDEX EmployeesOrders
-    ON Orders (EmployeeId ASC);
-
-CREATE NONCLUSTERED INDEX OrderDate
+CREATE NONCLUSTERED INDEX IX_Orders_OrderDate
     ON Orders (OrderDate ASC);
 
-CREATE NONCLUSTERED INDEX ShippedDate
+CREATE NONCLUSTERED INDEX IX_Orders_ShippedDate
     ON Orders (ShippedDate ASC);
 
-CREATE NONCLUSTERED INDEX ShippersOrders
+CREATE NONCLUSTERED INDEX IX_Orders_ShippedVia
     ON Orders (ShipVia ASC);
 
-CREATE NONCLUSTERED INDEX ShipPostalCode
+CREATE NONCLUSTERED INDEX IX_Orders_ShipPostalCode
     ON Orders (ShipPostalCode ASC);

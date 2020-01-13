@@ -15,8 +15,8 @@ CREATE TABLE Suppliers (
     CONSTRAINT PK_Suppliers PRIMARY KEY CLUSTERED (SupplierId ASC)
 );
 
-CREATE NONCLUSTERED INDEX CompanyName
+CREATE NONCLUSTERED INDEX IX_Suppliers_CompanyName
     ON Suppliers (CompanyName ASC);
 
-CREATE NONCLUSTERED INDEX PostalCode
+CREATE NONCLUSTERED INDEX IX_Suppliers_PostalCode
     ON Suppliers (PostalCode ASC);

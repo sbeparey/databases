@@ -29,7 +29,7 @@ CREATE NONCLUSTERED INDEX ix_orders__order_date
 CREATE NONCLUSTERED INDEX ix_orders__shipped_date
     ON orders (shipped_date ASC);
 
-CREATE NONCLUSTERED INDEX ix_orders__shippers_orders
+CREATE NONCLUSTERED INDEX ix_orders__shippers_via
     ON orders (ship_via ASC);
 
 CREATE NONCLUSTERED INDEX ix_orders__ship_postal_code

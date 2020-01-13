@@ -4,4 +4,3 @@ CREATE TABLE Region (
     RegionDescription   NCHAR(50)   NOT NULL,
     CONSTRAINT PK_Region PRIMARY KEY NONCLUSTERED (RegionId ASC)
 );
-
