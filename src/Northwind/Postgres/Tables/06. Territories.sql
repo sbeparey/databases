@@ -2,7 +2,7 @@
 CREATE TABLE territories (
     territory_id             VARCHAR(20)        NOT NULL,
     territory_description    CHAR(50)           NOT NULL,
-    region_id                INT                NOT NULL,
+    region_id                SMALLINT           NOT NULL,
     CONSTRAINT pk_territories PRIMARY KEY (territory_id)
 );
 
