@@ -1,5 +1,5 @@
-﻿DROP VIEW IF EXISTS Invoices;
-GO
+﻿--DROP VIEW IF EXISTS Invoices;
+--GO
 
 CREATE VIEW Invoices AS
 SELECT Orders.ShipName, Orders.ShipAddress, Orders.ShipCity, Orders.ShipRegion, Orders.ShipPostalCode, 

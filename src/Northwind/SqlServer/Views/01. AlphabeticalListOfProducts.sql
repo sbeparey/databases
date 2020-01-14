@@ -1,5 +1,5 @@
-﻿DROP VIEW IF EXISTS AlphabeticalListOfProducts;
-GO
+﻿--DROP VIEW IF EXISTS AlphabeticalListOfProducts;
+--GO
 
 CREATE VIEW AlphabeticalListOfProducts AS
 SELECT Products.*, Categories.CategoryName

@@ -1,5 +1,5 @@
-﻿DROP VIEW IF EXISTS CustomerAndSuppliersByCity;
-GO
+﻿--DROP VIEW IF EXISTS CustomerAndSuppliersByCity;
+--GO
 
 CREATE VIEW CustomerAndSuppliersByCity AS
 SELECT City, CompanyName, ContactName, 'Customers' AS Relationship 

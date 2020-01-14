@@ -1,5 +1,5 @@
-﻿DROP VIEW IF EXISTS OrdersQry;
-GO
+﻿--DROP VIEW IF EXISTS OrdersQry;
+--GO
 
 CREATE VIEW OrdersQry AS
 SELECT Orders.OrderId, Orders.CustomerId, Orders.EmployeeId, Orders.OrderDate, Orders.RequiredDate, 

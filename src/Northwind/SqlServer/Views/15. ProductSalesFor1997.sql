@@ -1,5 +1,5 @@
-﻿DROP VIEW IF EXISTS ProductSalesFor1997;
-GO
+﻿--DROP VIEW IF EXISTS ProductSalesFor1997;
+--GO
 
 CREATE VIEW ProductSalesFor1997 AS
 SELECT Categories.CategoryName, Products.ProductName, 

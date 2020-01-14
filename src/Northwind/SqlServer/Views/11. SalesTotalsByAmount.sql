@@ -1,5 +1,5 @@
-﻿DROP VIEW IF EXISTS SalesTotalsByAmount;
-GO
+﻿--DROP VIEW IF EXISTS SalesTotalsByAmount;
+--GO
 
 CREATE VIEW SalesTotalsByAmount AS
 SELECT OrderSubtotals.Subtotal AS SaleAmount, Orders.OrderId, Customers.CompanyName, Orders.ShippedDate

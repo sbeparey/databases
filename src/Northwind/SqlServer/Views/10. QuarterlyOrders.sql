@@ -1,5 +1,5 @@
-﻿DROP VIEW IF EXISTS QuarterlyOrders;
-GO
+﻿--DROP VIEW IF EXISTS QuarterlyOrders;
+--GO
 
 CREATE VIEW QuarterlyOrders AS
 SELECT DISTINCT Customers.CustomerId, Customers.CompanyName, Customers.City, Customers.Country

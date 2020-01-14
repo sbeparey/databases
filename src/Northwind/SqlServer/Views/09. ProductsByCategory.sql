@@ -1,5 +1,5 @@
-﻿DROP VIEW IF EXISTS ProductsByCategory;
-GO
+﻿--DROP VIEW IF EXISTS ProductsByCategory;
+--GO
 
 CREATE VIEW ProductsByCategory AS
 SELECT Categories.CategoryName, Products.ProductName, Products.QuantityPerUnit, Products.UnitsInStock, Products.Discontinued

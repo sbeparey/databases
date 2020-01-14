@@ -1,5 +1,5 @@
-﻿DROP VIEW IF EXISTS SalesByCategory;
-GO
+﻿--DROP VIEW IF EXISTS SalesByCategory;
+--GO
 
 CREATE VIEW SalesByCategory AS
 SELECT Categories.CategoryId, Categories.CategoryName, Products.ProductName, 

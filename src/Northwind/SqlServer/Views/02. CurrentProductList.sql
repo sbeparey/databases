@@ -1,5 +1,5 @@
-﻿DROP VIEW IF EXISTS CurrentProductList;
-GO
+﻿--DROP VIEW IF EXISTS CurrentProductList;
+--GO
 
 CREATE VIEW CurrentProductList AS
 SELECT ProductId, ProductName

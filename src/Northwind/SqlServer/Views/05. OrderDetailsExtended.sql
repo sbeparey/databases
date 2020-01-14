@@ -1,5 +1,5 @@
-﻿DROP VIEW IF EXISTS OrderDetailsExtended;
-GO
+﻿--DROP VIEW IF EXISTS OrderDetailsExtended;
+--GO
 
 CREATE VIEW OrderDetailsExtended AS
 SELECT "Order Details".OrderId, "Order Details".ProductId, Products.ProductName, 

@@ -1,5 +1,5 @@
-﻿DROP VIEW IF EXISTS SummaryOfSalesByYear;
-GO
+﻿--DROP VIEW IF EXISTS SummaryOfSalesByYear;
+--GO
 
 CREATE VIEW SummaryOfSalesByYear AS
 SELECT Orders.ShippedDate, Orders.OrderId, OrderSubtotals.Subtotal
