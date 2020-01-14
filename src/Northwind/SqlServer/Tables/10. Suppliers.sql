@@ -1,6 +1,6 @@
 ﻿DROP TABLE IF EXISTS Suppliers;
 CREATE TABLE Suppliers (
-    SupplierId      INT            IDENTITY(1, 1) NOT NULL,
+    SupplierId      INT            NOT NULL IDENTITY(1, 1),
     CompanyName     NVARCHAR(40)   NOT NULL,
     ContactName     NVARCHAR(30)   NULL,
     ContactTitle    NVARCHAR(30)   NULL,

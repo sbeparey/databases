@@ -2,9 +2,9 @@
 CREATE TABLE order_details (
     order_id            INT             NOT NULL,
     product_id          INT             NOT NULL,
-    unit_price          REAL            CONSTRAINT df_order_details__unit_price DEFAULT (0) NOT NULL,
-    quantity            SMALLINT        CONSTRAINT df_order_details__quantity DEFAULT (1) NOT NULL,
-    discount            REAL            CONSTRAINT df_order_details__discount DEFAULT (0) NOT NULL,
+    unit_price          REAL            NOT NULL    CONSTRAINT df_order_details__unit_price DEFAULT (0),
+    quantity            SMALLINT        NOT NULL    CONSTRAINT df_order_details__quantity DEFAULT (1),
+    discount            REAL            NOT NULL    CONSTRAINT df_order_details__discount DEFAULT (0),
     CONSTRAINT pk_order_details PRIMARY KEY (order_id, product_id),
     CONSTRAINT ck_discount CHECK (discount >= 0 AND discount <= 1),
     CONSTRAINT ck_quantity CHECK (quantity > 0),

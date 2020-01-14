@@ -1,6 +1,6 @@
 ﻿DROP TABLE IF EXISTS Employees;
 CREATE TABLE Employees (
-    EmployeeId          SMALLINT        IDENTITY(1, 1) NOT NULL,
+    EmployeeId          SMALLINT        NOT NULL IDENTITY(1, 1),
     LastName            NVARCHAR(20)    NOT NULL,
     FirstName           NVARCHAR(10)    NOT NULL,
     Title               NVARCHAR(30)    NULL,

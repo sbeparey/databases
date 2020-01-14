@@ -7,7 +7,7 @@ CREATE TABLE orders (
     required_date           DATE            NULL,
     shipped_date            DATE            NULL,
     ship_via                INT             NULL,
-    freight                 REAL            CONSTRAINT df_orders__freight DEFAULT (0) NULL,
+    freight                 REAL            NULL    CONSTRAINT df_orders__freight DEFAULT (0),
     ship_name               VARCHAR(40)     NULL,
     ship_address            VARCHAR(60)     NULL,
     ship_city               VARCHAR(15)     NULL,

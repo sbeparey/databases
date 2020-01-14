@@ -1,13 +1,13 @@
 ﻿DROP TABLE IF EXISTS Orders;
 CREATE TABLE Orders (
-    OrderId             INT              IDENTITY (1, 1) NOT NULL,
+    OrderId             INT              NOT NULL IDENTITY(1, 1),
     CustomerId          NCHAR(5)         NULL,
     EmployeeId          SMALLINT         NULL,
     OrderDate           DATETIME         NULL,
     RequiredDate        DATETIME         NULL,
     ShippedDate         DATETIME         NULL,
     ShipVia             INT              NULL,
-    Freight             MONEY            CONSTRAINT DF_Orders_Freight DEFAULT (0) NULL,
+    Freight             MONEY            NULL   CONSTRAINT DF_Orders_Freight DEFAULT (0),
     ShipName            NVARCHAR(40)     NULL,
     ShipAddress         NVARCHAR(60)     NULL,
     ShipCity            NVARCHAR(15)     NULL,

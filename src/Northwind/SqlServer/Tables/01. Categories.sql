@@ -1,6 +1,6 @@
 ﻿DROP TABLE IF EXISTS Categories;
 CREATE TABLE Categories (
-    CategoryId      SMALLINT        IDENTITY(1, 1) NOT NULL,
+    CategoryId      SMALLINT        NOT NULL IDENTITY(1, 1),
     CategoryName    NVARCHAR(15)    NOT NULL,
     "Description"   NTEXT           NULL,
     Picture         IMAGE           NULL,
