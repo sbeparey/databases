@@ -1,4 +1,7 @@
-﻿CREATE VIEW Invoices AS
+﻿DROP VIEW IF EXISTS Invoices;
+GO
+
+CREATE VIEW Invoices AS
 SELECT Orders.ShipName, Orders.ShipAddress, Orders.ShipCity, Orders.ShipRegion, Orders.ShipPostalCode, 
 	Orders.ShipCountry, Orders.CustomerId, Customers.CompanyName AS CustomerName, Customers."Address", Customers.City, 
 	Customers.Region, Customers.PostalCode, Customers.Country, (FirstName + ' ' + LastName) AS Salesperson, 
@@ -12,4 +15,4 @@ FROM Shippers INNER JOIN
 					ON Employees.EmployeeId = Orders.EmployeeId) 
 				INNER JOIN "Order Details" ON Orders.OrderId = "Order Details".OrderId) 
 			ON Products.ProductId = "Order Details".ProductId) 
-		ON Shippers.ShipperId = Orders.ShipVia
+		ON Shippers.ShipperId = Orders.ShipVia;

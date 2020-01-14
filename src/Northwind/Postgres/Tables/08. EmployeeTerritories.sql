@@ -1,6 +1,10 @@
 ﻿DROP TABLE IF EXISTS employee_territories;
 CREATE TABLE employee_territories (
-    employee_id      INT             NOT NULL,
-    territory_id     NVARCHAR(20)    NOT NULL,
-    CONSTRAINT pk_employee_territories PRIMARY KEY NONCLUSTERED (employee_id ASC, territory_id ASC)
+    employee_id      SMALLINT           NOT NULL,
+    territory_id     VARCHAR(20)        NOT NULL,
+    CONSTRAINT pk_employee_territories PRIMARY KEY (employee_id, territory_id)
 );
+
+DROP INDEX IF EXISTS ix_employee_territories__employee_id__territory_id;
+CREATE INDEX ix_employee_territories__employee_id__territory_id ON employee_territories (employee_id, territory_id);
+CLUSTER employee_territories USING ix_employee_territories__employee_id__territory_id;

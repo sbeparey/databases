@@ -1,4 +1,5 @@
-﻿CREATE VIEW products_by_category AS
+﻿DROP VIEW IF EXISTS products_by_category;
+CREATE VIEW products_by_category AS
 SELECT categories.category_name, products.product_name, products.quantity_per_unit, products.units_in_stock, products.discontinued
 FROM categories INNER JOIN products ON categories.category_id = products.category_id
-WHERE products.discontinued <> 1
+WHERE products.discontinued <> TRUE;

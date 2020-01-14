@@ -1,6 +1,6 @@
 ﻿DROP TABLE IF EXISTS Employees;
 CREATE TABLE Employees (
-    EmployeeId          INT             IDENTITY(1, 1) NOT NULL,
+    EmployeeId          SMALLINT        IDENTITY(1, 1) NOT NULL,
     LastName            NVARCHAR(20)    NOT NULL,
     FirstName           NVARCHAR(10)    NOT NULL,
     Title               NVARCHAR(30)    NULL,
@@ -16,10 +16,10 @@ CREATE TABLE Employees (
     Extension           NVARCHAR(4)     NULL,
     Photo               IMAGE           NULL,
     Notes               NTEXT           NULL,
-    ReportsTo           INT             NULL,
+    ReportsTo           SMALLINT        NULL,
     PhotoPath           NVARCHAR(255)   NULL,
     CONSTRAINT PK_Employees PRIMARY KEY CLUSTERED (EmployeeId ASC),
-    CONSTRAINT CK_Birthdate CHECK (BirthDate < GETDATE()),
+    CONSTRAINT CK_Birthdate CHECK (BirthDate < GETDATE())
 );
 
 CREATE NONCLUSTERED INDEX IX_Employees_LastName
