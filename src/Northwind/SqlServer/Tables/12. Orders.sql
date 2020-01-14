@@ -2,7 +2,7 @@
 CREATE TABLE Orders (
     OrderId             INT              IDENTITY (1, 1) NOT NULL,
     CustomerId          NCHAR(5)         NULL,
-    EmployeeId          INT              NULL,
+    EmployeeId          SMALLINT         NULL,
     OrderDate           DATETIME         NULL,
     RequiredDate        DATETIME         NULL,
     ShippedDate         DATETIME         NULL,

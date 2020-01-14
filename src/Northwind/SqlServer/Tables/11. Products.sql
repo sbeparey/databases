@@ -3,7 +3,7 @@ CREATE TABLE Products (
     ProductId           INT             IDENTITY (1, 1) NOT NULL,
     ProductName         NVARCHAR(40)    NOT NULL,
     SupplierId          INT             NULL,
-    CategoryId          INT             NULL,
+    CategoryId          SMALLINT        NULL,
     QuantityPerUnit     NVARCHAR(20)    NULL,
     UnitPrice           MONEY           CONSTRAINT DF_Products_UnitPrice DEFAULT (0) NULL,
     UnitsInStock        SMALLINT        CONSTRAINT DF_Products_UnitsInStock DEFAULT (0) NULL,
