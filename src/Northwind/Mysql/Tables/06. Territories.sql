@@ -1,8 +1,8 @@
 ﻿DROP TABLE IF EXISTS territories;
 CREATE TABLE territories (
-    territory_id             VARCHAR(20)        NOT NULL,
-    territory_description    CHAR(50)           NOT NULL,
-    region_id                SMALLINT           NOT NULL,
+    territory_id             VARCHAR(20)            NOT NULL,
+    description              VARCHAR(50)            NOT NULL,
+    region_id                SMALLINT               NOT NULL,
     CONSTRAINT pk_territories PRIMARY KEY (territory_id)
 );
 
