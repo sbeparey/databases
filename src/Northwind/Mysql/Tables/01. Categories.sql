@@ -1,6 +1,6 @@
 ﻿DROP TABLE IF EXISTS categories;
 CREATE TABLE categories (
-    category_id         SMALLINT        NOT NULL AUTO_INCREMENT,
+    category_id         SMALLINT        NOT NULL    AUTO_INCREMENT,
     category_name       VARCHAR(15)     NOT NULL,
     description         TEXT            NULL,
     picture             LONGBLOB        NULL,

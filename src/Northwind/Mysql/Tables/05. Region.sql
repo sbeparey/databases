@@ -1,6 +1,6 @@
 ﻿DROP TABLE IF EXISTS region;
 CREATE TABLE region (
-    region_id               SMALLINT            NOT NULL,
+    region_id               SMALLINT            NOT NULL    AUTO_INCREMENT,
     description             VARCHAR(50)         NOT NULL,
     CONSTRAINT pk_region PRIMARY KEY (region_id)
 );
