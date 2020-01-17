@@ -5,9 +5,4 @@
 		<Authors>Syed Beparey</Authors>
 	</PropertyGroup>
 
-	<ItemGroup>
-	  <Folder Include="Sqlite\Constraints\" />
-	  <Folder Include="Sqlite\Stored Procedures\" />
-	</ItemGroup>
-
 </Project>
