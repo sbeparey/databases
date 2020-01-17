@@ -3,6 +3,7 @@ CREATE TABLE employee_territories (
     employee_id      INTEGER            NOT NULL,
     territory_id     VARCHAR(20)        NOT NULL,
     CONSTRAINT pk_employee_territories PRIMARY KEY (employee_id, territory_id),
+    CONSTRAINT fk_employee_territories__employees FOREIGN KEY (employee_id) REFERENCES employees (employee_id),
     CONSTRAINT fk_employee_territories__territories FOREIGN KEY (territory_id) REFERENCES territories (territory_id)
 );
 
