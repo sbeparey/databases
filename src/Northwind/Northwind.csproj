@@ -6,18 +6,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <Compile Remove="Mysql\**" />
-	  <Compile Remove="Postgres\**" />
-	  <Compile Remove="SqlServer\**" />
-	  <EmbeddedResource Remove="Mysql\**" />
-	  <EmbeddedResource Remove="Postgres\**" />
-	  <EmbeddedResource Remove="SqlServer\**" />
-	  <None Remove="Mysql\**" />
-	  <None Remove="Postgres\**" />
-	  <None Remove="SqlServer\**" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <Folder Include="Sqlite\Constraints\" />
 	  <Folder Include="Sqlite\Stored Procedures\" />
 	</ItemGroup>
