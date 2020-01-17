@@ -23,8 +23,11 @@ CREATE TABLE employees (
     CONSTRAINT fk_employees__employees FOREIGN KEY (reports_to) REFERENCES employees (employee_id)
 );
 
+DROP INDEX IF EXISTS ix_employees__employee_id;
 CREATE UNIQUE INDEX ix_employees__employee_id ON employees (employee_id);
 
+DROP INDEX IF EXISTS ix_employees__last_name;
 CREATE INDEX ix_employees__last_name ON employees (last_name);
 
+DROP INDEX IF EXISTS ix_employees__postal_code;
 CREATE INDEX ix_employees__postal_code ON employees (postal_code);

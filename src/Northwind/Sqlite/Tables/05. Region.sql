@@ -5,4 +5,5 @@ CREATE TABLE region (
     CONSTRAINT pk_region PRIMARY KEY (region_id)
 );
 
+DROP INDEX IF EXISTS ix_region__region_id;
 CREATE INDEX ix_region__region_id ON region (region_id);

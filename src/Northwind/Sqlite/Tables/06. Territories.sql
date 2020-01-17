@@ -8,4 +8,5 @@ CREATE TABLE territories (
     CONSTRAINT fk_territories__region FOREIGN KEY (region_id) REFERENCES region (region_id)
 );
 
+DROP INDEX IF EXISTS ix_territories__territory_id;
 CREATE INDEX ix_territories__territory_id ON territories (territory_id);

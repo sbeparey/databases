@@ -20,16 +20,23 @@ CREATE TABLE orders (
     CONSTRAINT fk_orders__shippers FOREIGN KEY (ship_via) REFERENCES shippers (shipper_id)
 );
 
+DROP INDEX IF EXISTS ix_orders__order_id;
 CREATE UNIQUE INDEX ix_orders__order_id ON orders (order_id);
 
+DROP INDEX IF EXISTS ix_orders__customer_id;
 CREATE INDEX ix_orders__customer_id ON orders (customer_id);
 
+DROP INDEX IF EXISTS ix_orders__employee_id;
 CREATE INDEX ix_orders__employee_id ON orders (employee_id);
 
+DROP INDEX IF EXISTS ix_orders__order_date;
 CREATE INDEX ix_orders__order_date ON orders (order_date);
 
+DROP INDEX IF EXISTS ix_orders__shipped_date;
 CREATE INDEX ix_orders__shipped_date ON orders (shipped_date);
 
+DROP INDEX IF EXISTS ix_orders__shippers_via;
 CREATE INDEX ix_orders__shippers_via ON orders (ship_via);
 
+DROP INDEX IF EXISTS ix_orders__ship_postal_code;
 CREATE INDEX ix_orders__ship_postal_code ON orders (ship_postal_code);

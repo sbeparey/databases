@@ -6,4 +6,5 @@ CREATE TABLE employee_territories (
     CONSTRAINT fk_employee_territories__territories FOREIGN KEY (territory_id) REFERENCES territories (territory_id)
 );
 
+DROP INDEX IF EXISTS ix_employee_territories__employee_id__territory_id;
 CREATE INDEX ix_employee_territories__employee_id__territory_id ON employee_territories (employee_id, territory_id);

@@ -19,10 +19,14 @@ CREATE TABLE products (
     CONSTRAINT fk_products__categories FOREIGN KEY (category_id) REFERENCES categories (category_id)
 );
 
+DROP INDEX IF EXISTS ix_products__product_id;
 CREATE UNIQUE INDEX ix_products__product_id ON products (product_id);
 
+DROP INDEX IF EXISTS ix_products__category_id;
 CREATE INDEX ix_products__category_id ON products (category_id);
 
+DROP INDEX IF EXISTS ix_products__product_name;
 CREATE INDEX ix_products__product_name ON products (product_name);
 
+DROP INDEX IF EXISTS ix_products__supplier_id;
 CREATE INDEX ix_products__supplier_id ON products (supplier_id);

@@ -6,4 +6,5 @@ CREATE TABLE shippers (
     CONSTRAINT pk_shippers PRIMARY KEY (shipper_id)
 );
 
+DROP INDEX IF EXISTS ix_shippers_shipper_id;
 CREATE UNIQUE INDEX ix_shippers_shipper_id ON shippers (shipper_id);

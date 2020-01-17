@@ -14,12 +14,17 @@ CREATE TABLE customers (
     CONSTRAINT pk_customers PRIMARY KEY (customer_id)
 );
 
+DROP INDEX IF EXISTS ix_customers__customer_id;
 CREATE UNIQUE INDEX ix_customers__customer_id ON customers (customer_id);
 
+DROP INDEX IF EXISTS ix_customers__city;
 CREATE INDEX ix_customers__city ON customers (city);
 
+DROP INDEX IF EXISTS ix_customers__customer_name;
 CREATE INDEX ix_customers__customer_name ON customers (company_name);
 
+DROP INDEX IF EXISTS ix_customers__postal_code;
 CREATE INDEX ix_customers__postal_code ON customers (postal_code);
 
+DROP INDEX IF EXISTS ix_customers__region;
 CREATE INDEX ix_customers__region ON customers (region);

@@ -7,4 +7,5 @@ CREATE TABLE customer_customer_demo (
     CONSTRAINT fk_customer_customer_demo__customer_demographics FOREIGN KEY (customer_type_id) REFERENCES customer_demographics (customer_type_id)
 );
 
+DROP INDEX IF EXISTS ix_customer_customer_demo__customer_id__customer_type_id;
 CREATE INDEX ix_customer_customer_demo__customer_id__customer_type_id ON customer_customer_demo (customer_id, customer_type_id);

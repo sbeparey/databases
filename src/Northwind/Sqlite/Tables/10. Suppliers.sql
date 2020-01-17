@@ -15,8 +15,11 @@ CREATE TABLE suppliers (
     CONSTRAINT pk_suppliers PRIMARY KEY (supplier_id)
 );
 
+DROP INDEX IF EXISTS ix_suppliers__supplier_id;
 CREATE UNIQUE INDEX ix_suppliers__supplier_id ON suppliers (supplier_id);
 
+DROP INDEX IF EXISTS ix_suppliers__customer_name;
 CREATE INDEX ix_suppliers__customer_name ON suppliers (company_name);
 
+DROP INDEX IF EXISTS ix_suppliers__postal_code;
 CREATE INDEX ix_suppliers__postal_code ON suppliers (postal_code);
