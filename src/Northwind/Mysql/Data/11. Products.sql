@@ -1,4 +1,4 @@
-﻿SET IDENTITY_INSERT products ON;
+﻿SET FOREIGN_KEY_CHECKS = 0;
 
 INSERT INTO products (product_id, product_name, supplier_id, category_id, quantity_per_unit, unit_price, units_in_stock, units_on_order, reorder_level, discontinued) VALUES (1, 'Chai', 1, 1, '10 boxes x 20 bags', 18, 39, 0, 10, 0);
 INSERT INTO products (product_id, product_name, supplier_id, category_id, quantity_per_unit, unit_price, units_in_stock, units_on_order, reorder_level, discontinued) VALUES (2, 'Chang', 1, 1, '24 - 12 oz bottles', 19, 17, 40, 25, 0);
@@ -78,4 +78,4 @@ INSERT INTO products (product_id, product_name, supplier_id, category_id, quanti
 INSERT INTO products (product_id, product_name, supplier_id, category_id, quantity_per_unit, unit_price, units_in_stock, units_on_order, reorder_level, discontinued) VALUES (76, 'Lakkalikööri', 23, 1, '500 ml', 18, 57, 0, 20, 0);
 INSERT INTO products (product_id, product_name, supplier_id, category_id, quantity_per_unit, unit_price, units_in_stock, units_on_order, reorder_level, discontinued) VALUES (77, 'Original Frankfurter grüne Soße', 12, 2, '12 boxes', 13, 32, 0, 15, 0);
 
-SET IDENTITY_INSERT products OFF;
+SET FOREIGN_KEY_CHECKS = 1;

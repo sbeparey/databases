@@ -1,4 +1,4 @@
-﻿SET IDENTITY_INSERT orders ON;
+﻿ALTER TABLE orders DISABLE TRIGGER ALL;
 
 INSERT INTO orders (order_id, customer_id, employee_id, order_date, required_date, shipped_date, ship_via, freight, ship_name, ship_address, ship_city, ship_region, ship_postal_code, ship_country) VALUES (10248, N'VINET', 5, '7/4/1996', '8/1/1996', '7/16/1996', 3, 32.38, N'Vins et alcools Chevalier', N'59 rue de l''Abbaye', N'Reims', NULL, N'51100', N'France');
 INSERT INTO orders (order_id, customer_id, employee_id, order_date, required_date, shipped_date, ship_via, freight, ship_name, ship_address, ship_city, ship_region, ship_postal_code, ship_country) VALUES (10249, N'TOMSP', 6, '7/5/1996', '8/16/1996', '7/10/1996', 1, 11.61, N'Toms Spezialitäten', N'Luisenstr. 48', N'Münster', NULL, N'44087', N'Germany');
@@ -831,4 +831,4 @@ INSERT INTO orders (order_id, customer_id, employee_id, order_date, required_dat
 INSERT INTO orders (order_id, customer_id, employee_id, order_date, required_date, shipped_date, ship_via, freight, ship_name, ship_address, ship_city, ship_region, ship_postal_code, ship_country) VALUES (11076, N'BONAP', 4, '5/6/1998', '6/3/1998', NULL, 2, 38.28, N'Bon app''', N'12, rue des Bouchers', N'Marseille', NULL, N'13008', N'France');
 INSERT INTO orders (order_id, customer_id, employee_id, order_date, required_date, shipped_date, ship_via, freight, ship_name, ship_address, ship_city, ship_region, ship_postal_code, ship_country) VALUES (11077, N'RATTC', 1, '5/6/1998', '6/3/1998', NULL, 2, 8.53, N'Rattlesnake Canyon Grocery', N'2817 Milton Dr.', N'Albuquerque', N'NM', N'87110', N'USA');
 
-SET IDENTITY_INSERT orders OFF;
+ALTER TABLE orders ENABLE TRIGGER ALL;
