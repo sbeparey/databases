@@ -1,6 +1,7 @@
 ﻿DROP PROCEDURE IF EXISTS customer_order_history;
 
-DELIMITER //
+-- DELIMITER 
+-- //
 
 CREATE PROCEDURE customer_order_history(_customer_id char(5))
 
@@ -14,6 +15,7 @@ BEGIN
           OD.product_id = P.product_id
     GROUP BY product_name;
 
-END; //
+END
 
-DELIMITER ;
+-- //
+-- DELIMITER ;

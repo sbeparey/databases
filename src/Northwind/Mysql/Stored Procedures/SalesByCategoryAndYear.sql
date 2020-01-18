@@ -1,6 +1,7 @@
 ﻿DROP PROCEDURE IF EXISTS sales_by_category_and_year;
 
-DELIMITER //
+-- DELIMITER 
+-- //
 
 CREATE PROCEDURE sales_by_category_and_year(_category_name VARCHAR(15), _order_year VARCHAR(4))
 BEGIN
@@ -18,6 +19,7 @@ BEGIN
         AND date_part('year', O.order_date) = _order_year
     GROUP BY product_name
     ORDER BY product_name;
-END; //
+END
 
-DELIMITER ;
+-- //
+-- DELIMITER ;

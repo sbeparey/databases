@@ -1,6 +1,7 @@
 ﻿DROP PROCEDURE IF EXISTS customer_orders_detail;
 
-DELIMITER //
+-- DELIMITER 
+-- //
 
 CREATE PROCEDURE customer_orders_detail(_order_id INT)
 
@@ -13,6 +14,7 @@ BEGIN
     FROM products P, order_details Od
     WHERE Od.product_id = P.product_id AND 
           Od.order_id = _order_id;
-END; //
+END
 
-DELIMITER ;
+-- //
+-- DELIMITER ;

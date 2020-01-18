@@ -1,6 +1,7 @@
 ﻿DROP PROCEDURE IF EXISTS customer_orders;
 
-DELIMITER //
+-- DELIMITER 
+-- //
 
 CREATE PROCEDURE customer_orders(_customer_id CHAR(5))
 BEGIN
@@ -11,6 +12,7 @@ BEGIN
     FROM orders
     WHERE customer_id = _customer_id
     ORDER BY order_id;
-END; //
+END
 
-DELIMITER ;
+-- //
+-- DELIMITER ;

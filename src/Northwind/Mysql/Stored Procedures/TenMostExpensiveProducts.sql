@@ -1,6 +1,7 @@
 ﻿DROP PROCEDURE IF EXISTS ten_most_expensive_products;
 
-DELIMITER //
+-- DELIMITER 
+-- //
 
 CREATE PROCEDURE ten_most_expensive_products()
 BEGIN
@@ -8,6 +9,7 @@ BEGIN
 	FROM products
 	ORDER BY products.unit_price DESC
 	LIMIT 10;
-END; //
+END
 
-DELIMITER ;
+-- //
+-- DELIMITER ;
